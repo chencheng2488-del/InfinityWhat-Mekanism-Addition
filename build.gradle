@@ -9,7 +9,15 @@ version = mod_version
 group = mod_group_id
 
 base {
-    archivesName = "InfWhat_Mekanism_Addition-" + project.minecraft_version + "-forge"
+    archivesName = "InfWhat_Mekanism_Addition_" + project.minecraft_version + "Forge"
+}
+
+tasks.named('jar', Jar).configure {
+    archiveFileName = "InfWhat_Mekanism_Addition_${project.minecraft_version}Forge_${mod_version}.jar"
+}
+
+tasks.matching { it.name == 'reobfJar' }.configureEach {
+    archiveFileName = "InfWhat_Mekanism_Addition_${project.minecraft_version}Forge_${mod_version}.jar"
 }
 
 java.toolchain.languageVersion = JavaLanguageVersion.of(project.java_toolchain_version as int)

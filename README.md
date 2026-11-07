@@ -8,7 +8,7 @@
 
 Infinity What 的可选 Mekanism 联动附属。它把“无限资源”的思路延伸到 Mekanism 的化学品与辐射系统：一个可配置的无限化学品源、一条从辐射到核化学品的完整产线，以及专用的辐射储罐。
 
-本体（`Infinity What`）不需要安装 Mekanism；只有本附属需要。未安装 Mekanism 时本附属不会加载。
+本体（`infwhat`）不需要安装 Mekanism；只有本附属需要。未安装 Mekanism 时本附属不会加载。
 
 ### 功能
 
@@ -40,6 +40,16 @@ Infinity What 的可选 Mekanism 联动附属。它把“无限资源”的思�
 
 - **必需**：Infinity What 本体 `infwhat` >= 2.0.0（实测 2.1.0b）
 - **必需**：Mekanism，版本范围见上表
+- **可选**：JEI、Jade
+
+产物文件（位于本目录）：
+
+| 文件 | 适用版本 |
+|---|---|
+| `InfWhat_Mekanism_Addition_1.19.2Forge_1.0.0.jar` | 1.19.2 Forge |
+| `InfWhat_Mekanism_Addition_1.20.1Forge_1.0.0.jar` | 1.20.1 Forge |
+| `InfWhat_Mekanism_Addition_1.20.4NeoForge_1.0.0.jar` | 1.20.4 NeoForge |
+| `InfWhat_Mekanism_Addition_1.21.1NeoForge_1.0.0.jar` | 1.21.1 NeoForge |
 
 ### 安装
 
@@ -121,7 +131,7 @@ K = 8192 mB，a = 1.5
 
 ### 从源码构建
 
-切换到需要的版本分支后，下载源码并执行：
+各版本工程位于 `Mekanism Linkage Attempt` 下的对应目录：
 
 ```bash
 ./gradlew build -x createMinecraftArtifacts
@@ -139,7 +149,7 @@ K = 8192 mB，a = 1.5
 
 Optional Mekanism add-on for Infinity What. It extends the "infinite resources" idea into Mekanism chemicals and radiation: a configurable infinite chemical source, a complete radiation-to-nuclear-chemical production line, and a dedicated radiation tank.
 
-The core mod (`Infinity What`) does not require Mekanism; only this add-on does. Without Mekanism installed, the add-on does not load.
+The core mod (`infwhat`) does not require Mekanism; only this add-on does. Without Mekanism installed, the add-on does not load.
 
 ### Features
 
@@ -171,6 +181,7 @@ Dependencies:
 
 - **Required**: Infinity What core `infwhat` >= 2.0.0 (tested with 2.1.0b)
 - **Required**: Mekanism, version range as listed above
+- **Optional**: JEI, Jade
 
 ### Installation
 
@@ -208,6 +219,8 @@ Behaviour: below `K` the yield grows (roughly doubles per cycle), at `K` it is s
 - **Dedicated servers**: the chemical generator and radiation sponge are disabled by default; enable `gas_tap.allowOnDedicatedServer` and `radiation_sponge.allowRadiationSpongeOnDedicatedServer`.
 
 ### Building from source
+
+Each version project lives under `Mekanism Linkage Attempt`:
 
 ```bash
 ./gradlew build -x createMinecraftArtifacts
