@@ -1,0 +1,23 @@
+﻿{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    " G ",
+    "A#A",
+    " G "
+  ],
+  "key": {
+    "G": {
+      "tag": "c:glass/silica"
+    },
+    "A": {
+      "tag": "mekanism:alloys/infused"
+    },
+    "#": {
+      "tag": "c:ingots/lead"
+    }
+  },
+  "result": {
+    "id": "infwhat_mekanism:upgrade_containment",
+    "count": 1
+  }
+}

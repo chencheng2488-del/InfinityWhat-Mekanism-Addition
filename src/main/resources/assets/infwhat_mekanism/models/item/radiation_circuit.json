@@ -1,0 +1,38 @@
+{
+  "parent": "minecraft:item/generated",
+  "textures": {
+    "layer0": "infwhat_mekanism:item/radiation_circuit_1"
+  },
+  "overrides": [
+    {
+      "predicate": {
+        "circuit": 2
+      },
+      "model": "infwhat_mekanism:item/radiation_circuit_2"
+    },
+    {
+      "predicate": {
+        "circuit": 3
+      },
+      "model": "infwhat_mekanism:item/radiation_circuit_3"
+    },
+    {
+      "predicate": {
+        "circuit": 4
+      },
+      "model": "infwhat_mekanism:item/radiation_circuit_4"
+    },
+    {
+      "predicate": {
+        "circuit": 5
+      },
+      "model": "infwhat_mekanism:item/radiation_circuit_5"
+    },
+    {
+      "predicate": {
+        "circuit": 6
+      },
+      "model": "infwhat_mekanism:item/radiation_circuit_6"
+    }
+  ]
+}

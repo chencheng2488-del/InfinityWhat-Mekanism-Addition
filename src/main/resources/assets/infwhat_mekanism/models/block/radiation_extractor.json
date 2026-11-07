@@ -1,0 +1,244 @@
+{
+  "loader": "neoforge:composite",
+  "parent": "block/block",
+  "gui_light": "side",
+  "credit": "Made with Blockbench",
+  "textures": {
+    "particle": "infwhat_mekanism:block/radiation_extractor"
+  },
+  "children": {
+    "cutout": {
+      "render_type": "minecraft:cutout",
+      "textures": {
+        "0": "infwhat_mekanism:block/radiation_extractor",
+        "1": "infwhat_mekanism:block/radiation_extractor_element",
+        "2": "mekanism:block/models/ports_led",
+        "3": "infwhat_mekanism:block/port"
+      },
+      "elements": [
+        {
+          "name": "Base",
+          "from": [0, 0, 0],
+          "to": [16, 4, 16],
+          "faces": {
+            "north": {"uv": [8, 0, 16, 2], "texture": "#0"},
+            "east": {"uv": [8, 0, 16, 2], "texture": "#0"},
+            "south": {"uv": [8, 0, 16, 2], "texture": "#0"},
+            "west": {"uv": [8, 0, 16, 2], "texture": "#0"},
+            "up": {"uv": [0, 0, 8, 8], "texture": "#0"},
+            "down": {"uv": [0, 8, 8, 16], "texture": "#0"}
+          }
+        },
+        {
+          "name": "Beam-South",
+          "from": [2, 14, 14],
+          "to": [14, 16, 16],
+          "faces": {
+            "north": {"uv": [7, 0, 13, 1], "texture": "#1"},
+            "east": {"uv": [7, 0, 8, 1], "texture": "#1"},
+            "south": {"uv": [7, 0, 13, 1], "texture": "#1"},
+            "west": {"uv": [9, 0, 10, 1], "texture": "#1"},
+            "up": {"uv": [7, 0, 13, 1], "texture": "#1"},
+            "down": {"uv": [7, 0, 13, 1], "texture": "#1"}
+          }
+        },
+        {
+          "name": "Beam-North",
+          "from": [2, 14, 0],
+          "to": [14, 16, 2],
+          "faces": {
+            "north": {"uv": [7, 0, 13, 1], "texture": "#1"},
+            "east": {"uv": [7, 0, 8, 1], "texture": "#1"},
+            "south": {"uv": [7, 0, 13, 1], "texture": "#1"},
+            "west": {"uv": [9, 0, 10, 1], "texture": "#1"},
+            "up": {"uv": [7, 0, 13, 1], "texture": "#1"},
+            "down": {"uv": [7, 0, 13, 1], "texture": "#1"}
+          }
+        },
+        {
+          "name": "Pillar",
+          "from": [7, 4, 7],
+          "to": [9, 15, 9],
+          "faces": {
+            "north": {"uv": [6, 6, 7, 11.5], "texture": "#1"},
+            "east": {"uv": [6, 6, 7, 11.5], "texture": "#1"},
+            "south": {"uv": [6, 6, 7, 11.5], "texture": "#1"},
+            "west": {"uv": [6, 6, 7, 11.5], "texture": "#1"},
+            "up": {"uv": [6, 6, 7, 7], "texture": "#1"},
+            "down": {"uv": [6, 6, 7, 7], "texture": "#1"}
+          }
+        },
+        {
+          "name": "Plane",
+          "from": [2, 15, 2],
+          "to": [14, 16, 14],
+          "faces": {
+            "north": {"uv": [7, 0, 13, 0.5], "texture": "#1"},
+            "east": {"uv": [7, 0, 13, 0.5], "texture": "#1"},
+            "south": {"uv": [7, 0, 13, 0.5], "texture": "#1"},
+            "west": {"uv": [7, 0, 13, 0.5], "texture": "#1"},
+            "up": {"uv": [0, 10, 6, 16], "rotation": 180, "texture": "#1"},
+            "down": {"uv": [6, 4, 7, 5], "texture": "#1"}
+          }
+        },
+        {
+          "name": "Pillar-West",
+          "from": [0, 4, 0],
+          "to": [2, 16, 16],
+          "faces": {
+            "north": {"uv": [9, 8, 10, 14], "texture": "#0"},
+            "east": {"uv": [8, 2, 16, 8], "texture": "#0"},
+            "south": {"uv": [9, 8, 10, 14], "texture": "#0"},
+            "west": {"uv": [8, 2, 16, 8], "texture": "#0"},
+            "up": {"uv": [8, 8, 9, 16], "texture": "#0"},
+            "down": {"uv": [8, 8, 9, 16], "texture": "#0"}
+          }
+        },
+        {
+          "name": "Pillar-East",
+          "from": [14, 4, 0],
+          "to": [16, 16, 16],
+          "faces": {
+            "north": {"uv": [9, 8, 10, 14], "texture": "#0"},
+            "east": {"uv": [8, 2, 16, 8], "texture": "#0"},
+            "south": {"uv": [9, 8, 10, 14], "texture": "#0"},
+            "west": {"uv": [8, 2, 16, 8], "texture": "#0"},
+            "up": {"uv": [8, 8, 9, 16], "texture": "#0"},
+            "down": {"uv": [8, 8, 9, 16], "texture": "#0"}
+          }
+        },
+        {
+          "name": "Bar-NorthWest",
+          "from": [3, 11, 7],
+          "to": [7, 13, 9],
+          "faces": {
+            "north": {"uv": [7, 0, 9, 1], "texture": "#1"},
+            "east": {"uv": [7, 0, 8, 1], "texture": "#1"},
+            "south": {"uv": [7, 0, 9, 1], "texture": "#1"},
+            "west": {"uv": [7, 0, 8, 1], "texture": "#1"},
+            "up": {"uv": [11, 0, 13, 1], "texture": "#1"},
+            "down": {"uv": [7, 0, 9, 1], "texture": "#1"}
+          }
+        },
+        {
+          "name": "Bar-NorthEast",
+          "from": [9, 11, 7],
+          "to": [13, 13, 9],
+          "faces": {
+            "north": {"uv": [7, 0, 8, 1], "texture": "#1"},
+            "east": {"uv": [7, 0, 8, 1], "texture": "#1"},
+            "south": {"uv": [7, 0, 8, 1], "texture": "#1"},
+            "west": {"uv": [7, 0, 8, 1], "texture": "#1"},
+            "up": {"uv": [7, 0, 8, 1], "texture": "#1"},
+            "down": {"uv": [7, 0, 8, 1], "texture": "#1"}
+          }
+        },
+        {
+          "name": "Bar-SouthWest",
+          "from": [3, 5, 7],
+          "to": [7, 7, 9],
+          "faces": {
+            "north": {"uv": [7, 0, 9, 1], "texture": "#1"},
+            "east": {"uv": [7, 0, 9, 1], "texture": "#1"},
+            "south": {"uv": [7, 0, 9, 1], "texture": "#1"},
+            "west": {"uv": [7, 0, 9, 1], "texture": "#1"},
+            "up": {"uv": [7, 0, 9, 1], "texture": "#1"},
+            "down": {"uv": [7, 0, 9, 1], "texture": "#1"}
+          }
+        },
+        {
+          "name": "Bar-SouthEast",
+          "from": [9, 5, 7],
+          "to": [13, 7, 9],
+          "faces": {
+            "north": {"uv": [7, 0, 9, 1], "texture": "#1"},
+            "east": {"uv": [7, 0, 9, 1], "texture": "#1"},
+            "south": {"uv": [7, 0, 9, 1], "texture": "#1"},
+            "west": {"uv": [7, 0, 9, 1], "texture": "#1"},
+            "up": {"uv": [7, 0, 9, 1], "texture": "#1"},
+            "down": {"uv": [7, 0, 9, 1], "texture": "#1"}
+          }
+        },
+        {
+          "name": "Bar-West",
+          "from": [7, 8, 3],
+          "to": [9, 10, 7],
+          "faces": {
+            "north": {"uv": [7, 0, 9, 1], "texture": "#1"},
+            "east": {"uv": [7, 0, 9, 1], "texture": "#1"},
+            "south": {"uv": [7, 0, 9, 1], "texture": "#1"},
+            "west": {"uv": [7, 0, 9, 1], "texture": "#1"},
+            "up": {"uv": [7, 0, 9, 1], "texture": "#1"},
+            "down": {"uv": [7, 0, 9, 1], "texture": "#1"}
+          }
+        },
+        {
+          "name": "Bar-East",
+          "from": [7, 8, 9],
+          "to": [9, 10, 13],
+          "faces": {
+            "north": {"uv": [7, 0, 9, 1], "texture": "#1"},
+            "east": {"uv": [7, 0, 9, 1], "texture": "#1"},
+            "south": {"uv": [7, 0, 9, 1], "texture": "#1"},
+            "west": {"uv": [7, 0, 9, 1], "texture": "#1"},
+            "up": {"uv": [7, 0, 9, 1], "texture": "#1"},
+            "down": {"uv": [7, 0, 9, 1], "texture": "#1"}
+          }
+        },
+        {
+          "name": "Port-South",
+          "from": [4, 4, 15],
+          "to": [12, 12, 16],
+          "faces": {
+            "north": {"uv": [8, 0, 16, 8], "texture": "#3"},
+            "south": {"uv": [0, 0, 8, 8], "texture": "#3", "cullface": "south"}
+          }
+        },
+        {
+          "name": "Port-South-LED",
+          "from": [4, 4, 16],
+          "to": [12, 12, 16],
+          "faces": {
+            "south": {"uv": [8, 0, 16, 8], "texture": "#2", "cullface": "south"},
+            "west": {"uv": [0, 0, 0, 8], "texture": "#2"}
+          },
+          "neoforge_data": {
+            "block_light": 15,
+            "sky_light": 15
+          }
+        }
+      ]
+    },
+    "translucent": {
+      "render_type": "minecraft:translucent",
+      "textures": {
+        "0": "infwhat_mekanism:block/radiation_extractor",
+        "1": "infwhat_mekanism:block/radiation_extractor_element"
+      },
+      "elements": [
+        {
+          "name": "Window-North",
+          "from": [2, 4, 0],
+          "to": [14, 14, 1],
+          "faces": {
+            "north": {"uv": [0, 0, 6, 5], "texture": "#1"},
+            "east": {"uv": [6, 1, 6.5, 6], "texture": "#1"},
+            "south": {"uv": [0, 5, 6, 10], "texture": "#1"},
+            "west": {"uv": [6, 6, 6.5, 11], "texture": "#1"},
+            "up": {"uv": [6, 0, 12, 0.5], "texture": "#1"},
+            "down": {"uv": [6, 0.5, 12, 1], "texture": "#1"}
+          }
+        },
+        {
+          "name": "Port-Backing",
+          "from": [2, 4, 15],
+          "to": [14, 14, 16],
+          "faces": {
+            "north": {"uv": [7, 1, 13, 6], "texture": "#1"},
+            "south": {"uv": [7, 1, 13, 6], "texture": "#1"}
+          }
+        }
+      ]
+    }
+  }
+}

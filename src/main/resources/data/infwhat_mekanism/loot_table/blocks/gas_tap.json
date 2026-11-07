@@ -1,0 +1,35 @@
+{
+  "type": "minecraft:block",
+  "pools": [
+    {
+      "bonus_rolls": 0.0,
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "functions": [
+            {
+              "function": "minecraft:copy_name",
+              "source": "block_entity"
+            },
+            {
+              "function": "minecraft:copy_components",
+              "include": [
+                "mekanism:owner",
+                "mekanism:security",
+                "mekanism:side_config",
+                "mekanism:ejector",
+                "mekanism:redstone_control",
+                "mekanism:items"
+              ],
+              "source": "block_entity"
+            }
+          ],
+          "name": "infwhat_mekanism:gas_tap"
+        }
+      ],
+      "name": "main",
+      "rolls": 1.0
+    }
+  ],
+  "random_sequence": "infwhat_mekanism:blocks/gas_tap"
+}
