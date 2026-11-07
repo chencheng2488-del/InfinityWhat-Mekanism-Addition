@@ -40,16 +40,6 @@ Infinity What 的可选 Mekanism 联动附属。它把“无限资源”的思�
 
 - **必需**：Infinity What 本体 `infwhat` >= 2.0.0（实测 2.1.0b）
 - **必需**：Mekanism，版本范围见上表
-- **可选**：JEI、Jade
-
-产物文件（位于本目录）：
-
-| 文件 | 适用版本 |
-|---|---|
-| `InfWhat_Mekanism_Addition_1.19.2Forge_1.0.0.jar` | 1.19.2 Forge |
-| `InfWhat_Mekanism_Addition_1.20.1Forge_1.0.0.jar` | 1.20.1 Forge |
-| `InfWhat_Mekanism_Addition_1.20.4NeoForge_1.0.0.jar` | 1.20.4 NeoForge |
-| `InfWhat_Mekanism_Addition_1.21.1NeoForge_1.0.0.jar` | 1.21.1 NeoForge |
 
 ### 安装
 
