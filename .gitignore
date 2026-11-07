@@ -1,0 +1,38 @@
+# eclipse
+bin
+*.launch
+.settings
+.metadata
+.classpath
+.project
+
+# idea
+out
+*.ipr
+*.iws
+*.iml
+.idea
+
+# gradle
+build
+.gradle
+
+# other
+eclipse
+run
+runs
+run-data
+
+repo
+
+# local only
+.vscode
+reference
+素材
+wrapper
+*.log
+hs_err_pid*
+*.hprof
+
+# local reference jars (core + Mekanism API/runtime)
+libs

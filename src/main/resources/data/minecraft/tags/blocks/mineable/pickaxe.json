@@ -1,0 +1,10 @@
+{
+  "values": [
+    "infwhat_mekanism:gas_tap",
+    "infwhat_mekanism:radiation_extractor",
+    "infwhat_mekanism:radiation_fractionator",
+    "infwhat_mekanism:infinite_infusion_generator",
+    "infwhat_mekanism:infinite_slurry_generator",
+    "infwhat_mekanism:unknown_radiation_tank"
+  ]
+}

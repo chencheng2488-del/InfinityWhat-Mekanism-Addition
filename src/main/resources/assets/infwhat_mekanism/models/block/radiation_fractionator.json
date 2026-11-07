@@ -1,0 +1,7 @@
+{
+  "parent": "mekanism:block/machine",
+  "textures": {
+    "sides": "mekanism:block/block_steel",
+    "front": "mekanism:block/chemical_injection_chamber/front"
+  }
+}

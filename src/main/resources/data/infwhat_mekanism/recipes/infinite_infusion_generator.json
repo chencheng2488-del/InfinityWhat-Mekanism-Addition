@@ -1,0 +1,22 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "SIS",
+    "ICI",
+    "SIS"
+  ],
+  "key": {
+    "S": {
+      "item": "mekanism:ingot_steel"
+    },
+    "I": {
+      "item": "mekanism:alloy_infused"
+    },
+    "C": {
+      "item": "mekanism:advanced_chemical_tank"
+    }
+  },
+  "result": {
+    "item": "infwhat_mekanism:infinite_infusion_generator"
+  }
+}

@@ -1,0 +1,22 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "ASA",
+    "SBS",
+    "ASA"
+  ],
+  "key": {
+    "A": {
+      "item": "mekanism:alloy_reinforced"
+    },
+    "S": {
+      "item": "mekanism:steel_casing"
+    },
+    "B": {
+      "item": "mekanism:elite_control_circuit"
+    }
+  },
+  "result": {
+    "item": "infwhat_mekanism:radiation_fractionator"
+  }
+}
