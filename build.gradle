@@ -25,7 +25,15 @@ repositories {
 }
 
 base {
-    archivesName = "InfWhat_Mekanism_Addition-" + project.minecraft_version + "-forge"
+    archivesName = "InfWhat_Mekanism_Addition_" + project.minecraft_version + "Forge"
+}
+
+tasks.named('jar', Jar).configure {
+    archiveFileName = "InfWhat_Mekanism_Addition_${project.minecraft_version}Forge_${mod_version}.jar"
+}
+
+tasks.matching { it.name == 'reobfJar' }.configureEach {
+    archiveFileName = "InfWhat_Mekanism_Addition_${project.minecraft_version}Forge_${mod_version}.jar"
 }
 
 // Mojang ships Java 17 to end users in 1.20.1, so mods should target Java 17.
