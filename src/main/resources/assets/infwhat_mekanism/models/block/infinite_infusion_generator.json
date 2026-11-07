@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/cube_bottom_top",
+  "textures": {
+    "top": "infwhat_mekanism:block/infinite_infusion_generator_top",
+    "bottom": "infwhat_mekanism:block/infinite_infusion_generator_bottom",
+    "side": "infwhat_mekanism:block/infinite_infusion_generator"
+  }
+}

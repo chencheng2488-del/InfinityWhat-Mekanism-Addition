@@ -1,0 +1,10 @@
+{
+  "variants": {
+    "active=false": {
+      "model": "infwhat_mekanism:block/infinite_slurry_generator"
+    },
+    "active=true": {
+      "model": "infwhat_mekanism:block/infinite_slurry_generator"
+    }
+  }
+}

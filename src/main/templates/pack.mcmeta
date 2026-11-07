@@ -1,0 +1,9 @@
+{
+  "pack": {
+    "description": {
+      "text": "${mod_name} resources"
+    },
+    "pack_format": 26,
+    "supported_formats": [22, 26]
+  }
+}

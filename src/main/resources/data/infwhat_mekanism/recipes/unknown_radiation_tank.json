@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    " S ",
+    "SCS",
+    " S "
+  ],
+  "key": {
+    "S": {
+      "item": "mekanism:steel_casing"
+    },
+    "C": {
+      "item": "infwhat_mekanism:radiation_circuit"
+    }
+  },
+  "result": {
+    "item": "infwhat_mekanism:unknown_radiation_tank"
+  }
+}
