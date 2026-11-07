@@ -1,0 +1,10 @@
+{
+  "variants": {
+    "saturated=false": {
+      "model": "infwhat_mekanism:block/radiation_sponge"
+    },
+    "saturated=true": {
+      "model": "infwhat_mekanism:block/radiation_sponge_saturated"
+    }
+  }
+}

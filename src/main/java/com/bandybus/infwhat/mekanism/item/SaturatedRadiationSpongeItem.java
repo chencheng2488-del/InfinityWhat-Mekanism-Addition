@@ -1,0 +1,79 @@
+package com.bandybus.infwhat.mekanism.item;
+
+import net.minecraft.ChatFormatting;
+import net.minecraft.nbt.CompoundTag;
+import net.minecraft.network.chat.Component;
+import net.minecraft.world.item.BlockItem;
+import net.minecraft.world.item.Item;
+import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.item.TooltipFlag;
+import net.minecraft.world.level.Level;
+import net.minecraft.world.level.block.Block;
+
+import javax.annotation.Nullable;
+import java.util.List;
+
+/**
+ * A saturated Radiation Sponge. It can be placed back as the saturated block and is the input of
+ * the radiation extraction line.
+ */
+public class SaturatedRadiationSpongeItem extends BlockItem {
+
+    /** NBT key holding the number of radiation chunks the sponge absorbed. */
+    public static final String TAG_CHUNKS = "Chunks";
+
+    /** NBT key holding the total radiation magnitude the sponge absorbed. */
+    public static final String TAG_RADIATION = "Radiation";
+
+    /** NBT key holding the pre-computed yield of a player-dose absorption. */
+    public static final String TAG_PLAYER_YIELD = "PlayerYield";
+
+    public SaturatedRadiationSpongeItem(Block block, Properties properties) {
+        super(block, properties);
+    }
+
+    /** Returns the absorbed chunk count stored on the stack, or zero for plain stacks. */
+    public static int getChunks(ItemStack stack) {
+        CompoundTag tag = stack.getTag();
+        return tag == null ? 0 : Math.max(0, tag.getInt(TAG_CHUNKS));
+    }
+
+    /** Returns the absorbed radiation magnitude stored on the stack. */
+    public static double getRadiation(ItemStack stack) {
+        CompoundTag tag = stack.getTag();
+        return tag == null ? 0.0D : Math.max(0.0D, tag.getDouble(TAG_RADIATION));
+    }
+
+    /** Returns the pre-computed player-dose yield, or zero for environmental sponges. */
+    public static double getPlayerYield(ItemStack stack) {
+        CompoundTag tag = stack.getTag();
+        return tag == null ? 0.0D : Math.max(0.0D, tag.getDouble(TAG_PLAYER_YIELD));
+    }
+
+    /** Writes the pre-computed player-dose yield onto the stack. */
+    public static void setPlayerYield(ItemStack stack, double yield) {
+        stack.getOrCreateTag().putDouble(TAG_PLAYER_YIELD, Math.max(0.0D, yield));
+    }
+
+    @Override
+    public void appendHoverText(ItemStack stack, @Nullable Level level, List<Component> tooltip,
+                                TooltipFlag flag) {
+        super.appendHoverText(stack, level, tooltip, flag);
+        tooltip.add(Component.translatable(
+                        "item.infwhat_mekanism.saturated_radiation_sponge.tooltip")
+                .withStyle(ChatFormatting.GRAY));
+        int chunks = getChunks(stack);
+        if (chunks > 0) {
+            tooltip.add(Component.translatable(
+                            "item.infwhat_mekanism.saturated_radiation_sponge.chunks", chunks)
+                    .withStyle(ChatFormatting.DARK_AQUA));
+        }
+        double radiation = getRadiation(stack);
+        if (radiation > 0.0D) {
+            tooltip.add(Component.translatable(
+                            "item.infwhat_mekanism.saturated_radiation_sponge.radiation",
+                            String.format(java.util.Locale.ROOT, "%.2f", radiation))
+                    .withStyle(ChatFormatting.DARK_PURPLE));
+        }
+    }
+}

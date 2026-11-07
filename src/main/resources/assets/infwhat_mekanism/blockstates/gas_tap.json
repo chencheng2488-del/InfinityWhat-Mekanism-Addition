@@ -1,0 +1,34 @@
+{
+  "variants": {
+    "facing=north,active=false": {
+      "model": "infwhat_mekanism:block/gas_tap"
+    },
+    "facing=south,active=false": {
+      "model": "infwhat_mekanism:block/gas_tap",
+      "y": 180
+    },
+    "facing=east,active=false": {
+      "model": "infwhat_mekanism:block/gas_tap",
+      "y": 90
+    },
+    "facing=west,active=false": {
+      "model": "infwhat_mekanism:block/gas_tap",
+      "y": -90
+    },
+    "facing=north,active=true": {
+      "model": "infwhat_mekanism:block/gas_tap"
+    },
+    "facing=south,active=true": {
+      "model": "infwhat_mekanism:block/gas_tap",
+      "y": 180
+    },
+    "facing=east,active=true": {
+      "model": "infwhat_mekanism:block/gas_tap",
+      "y": 90
+    },
+    "facing=west,active=true": {
+      "model": "infwhat_mekanism:block/gas_tap",
+      "y": -90
+    }
+  }
+}

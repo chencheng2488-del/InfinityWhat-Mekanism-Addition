@@ -1,0 +1,22 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "M M",
+    " S ",
+    "L L"
+  ],
+  "key": {
+    "M": {
+      "item": "mekanism:module_radiation_shielding_unit"
+    },
+    "S": {
+      "item": "minecraft:sponge"
+    },
+    "L": {
+      "item": "mekanism:ingot_lead"
+    }
+  },
+  "result": {
+    "item": "infwhat_mekanism:radiation_sponge"
+  }
+}

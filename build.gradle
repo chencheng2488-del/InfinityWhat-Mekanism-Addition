@@ -1,0 +1,117 @@
+plugins {
+    id 'idea'
+    id 'java-library'
+    id 'maven-publish'
+    id 'net.neoforged.moddev.legacyforge' version '2.0.148'
+}
+
+version = mod_version
+group = mod_group_id
+
+base {
+    archivesName = "InfWhat_Mekanism_Addition-" + project.minecraft_version + "-forge"
+}
+
+java.toolchain.languageVersion = JavaLanguageVersion.of(project.java_toolchain_version as int)
+
+legacyForge {
+    enable {
+        forgeVersion = project.minecraft_version + '-' + project.forge_version
+    }
+
+    runs {
+        client {
+            client()
+        }
+
+        server {
+            server()
+            programArgument '--nogui'
+        }
+
+        configureEach {
+            systemProperty 'forge.logging.markers', 'REGISTRIES'
+            logLevel = org.slf4j.event.Level.DEBUG
+        }
+    }
+
+    mods {
+        "${mod_id}" {
+            sourceSet(sourceSets.main)
+        }
+    }
+}
+
+repositories {
+    mavenCentral()
+    maven {
+        url = 'https://maven.minecraftforge.net'
+    }
+    maven {
+        // Mekanism's official API repository.
+        url = 'https://modmaven.dev/'
+    }
+    mavenLocal()
+}
+
+dependencies {
+    // Local jars in libs/ (not committed). The API jar is a development artifact and can be
+    // consumed directly; the full jar is kept for reference only.
+    compileOnly files("libs/${core_jar}")
+    compileOnly files("libs/Mekanism-${mekanism_version}-api.jar")
+    compileOnly files("libs/Mekanism-${mekanism_version}.jar")
+
+    // JEI is optional; drop the matching jar into libs/ to compile the recipe viewer integration.
+    compileOnly files("libs/jei-1.19.2-forge-11.80.0.1094.jar")
+}
+
+// Expands the mods.toml / pack.mcmeta templates with the properties above.
+var generateModMetadata = tasks.register("generateModMetadata", ProcessResources) {
+    var replaceProperties = [
+            minecraft_version       : minecraft_version,
+            minecraft_version_range : minecraft_version_range,
+            forge_version           : forge_version,
+            forge_version_range     : forge_version_range,
+            loader_version_range    : loader_version_range,
+            mod_id                  : mod_id,
+            mod_name                : mod_name,
+            mod_license             : mod_license,
+            mod_version             : mod_version,
+            mod_authors             : mod_authors,
+            mod_description         : mod_description
+    ]
+    inputs.properties replaceProperties
+    expand replaceProperties
+    from "src/main/templates"
+    into "build/generated/sources/modMetadata"
+}
+sourceSets.main.resources.srcDir generateModMetadata
+legacyForge.ideSyncTask generateModMetadata
+
+publishing {
+    publications {
+        register('mavenJava', MavenPublication) {
+            from components.java
+        }
+    }
+    repositories {
+        maven {
+            url "file://${project.projectDir}/repo"
+        }
+    }
+}
+
+tasks.withType(JavaCompile).configureEach {
+    options.encoding = 'UTF-8'
+}
+
+idea {
+    module {
+        downloadSources = true
+        downloadJavadoc = true
+    }
+}
+
+processResources {
+    duplicatesStrategy = DuplicatesStrategy.EXCLUDE
+}
