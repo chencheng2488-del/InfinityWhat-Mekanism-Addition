@@ -10,10 +10,10 @@
       "item": "mekanism:ingot_steel"
     },
     "I": {
-      "item": "mekanism:alloy_infused"
+      "item": "mekanism:alloy_atomic"
     },
     "C": {
-      "item": "mekanism:advanced_chemical_tank"
+      "item": "mekanism:ultimate_chemical_tank"
     }
   },
   "result": {
